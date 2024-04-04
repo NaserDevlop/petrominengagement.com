@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+</head>
+<body>
+    <h1>student Name :  <h1 id="h1"> </h1> </h1><p id="p"></p>
+    <script>
+        
+        var month = 1;
+        var montevents =[
+        [
+            "" ,"1" , "1"
+        ],
+         [
+            "" ,"2" , "2"  
+        ],
+         [
+            "" ,"3" , "3"  
+        ],
+         [
+            "" ,"4" , "4" 
+        ],[
+            "" ,"5" , "5"  
+        ],
+         [
+            "" ,"6" , "6"  
+        ],
+         [
+            "" ,"7" , "7" 
+        ],
+         [
+            "" ,"8" , "8"  
+        ],[
+            "" ,"9" , "9" 
+        ],
+         [
+            "" ,"10" , "10" 
+        ],
+         [
+            "" ,"11" , "11"  
+        ],
+         [
+            "" ,"12" , "12" 
+        ]
+            
+        ];
+      let myArr = [ 
+      
+    {
+     studenName: "one",
+     studenClass: 0,
+     day:8,
+     studenSection: "a"
+    },
+    {
+     studenName: "tow",
+     studenClass: 1,
+     day:10,
+     studenSection: "a"
+    },
+    
+    {
+     studenName: "three",
+     studenClass: 2,
+     day:20,
+     studenSection: "a"
+    },
+    {
+     studenName: "four",
+     studenClass: 3,
+     day:8,
+     studenSection: "a"
+    },
+    {
+     studenName: "five",
+     studenClass: 4,
+     day:6,
+     studenSection: "a"
+    },
+    {
+     studenName: "six",
+     studenClass: 5,
+     day:13,
+     studenSection: "a"
+    },
+    
+    {
+     studenName: "seven",
+     studenClass: 6,
+     day:1,
+     studenSection: "a"
+    },
+    {
+     studenName: "seven-2",
+     studenClass: 6,
+     day:2,
+     studenSection: "a"
+    },
+    {
+     studenName: "aight",
+     studenClass: 7,
+     day:21,
+     studenSection: "a"
+    },
+    {
+     studenName: "nine",
+     studenClass: 8,
+     day:14,
+     studenSection: "a"
+    },
+    {
+     studenName: "ten",
+     studenClass: 9,
+     day:2,
+     studenSection: "a"
+    },
+    
+    {
+     studenName: "eleven",
+     studenClass: 10,
+     day:4,
+     studenSection: "a"
+    },
+    {
+     studenName: "twelve",
+     studenClass: 11,
+     day:22,
+     studenSection: "a"
+    },
+    {
+     studenName: "twelve-2",
+     studenClass: 11,
+     day:24,
+     studenSection: "a"
+    }
+    
+    
+];
+let length = myArr.length;
+let xa= undefined ;
+const monteventss=[];
+monteventss[0]=[];
+let x= parseInt(0);
+let y= parseInt(0);
+for (y  ; y++ <11 ;y++){
+     for (x  ; x <length ; x++)
+ {
+  let month = parseInt( myArr[x].studenClass) ;
+    let day = parseInt( myArr[x].day)
+    // if (montevents[month][day] ==""){ 
+    
+  montevents[month][day]= myArr[x].studenName + "x";
+    // }
+    // else {
+  montevents[month][day+1] = myArr[x].studenName +"";
+ 
+    //  }
+   }
+ }
+ 
+console.log(montevents);
+
+ myArr.forEach(function (myArr) {
+    
+    
+    if (myArr.studenClass==month){
+    document.getElementById('h1').innerHTML=myArr.studenName;
+    document.getElementById('p').innerHTML=myArr.studenClass;
+    
+  //  console.log(myArr.studenName);
+  }
+});
+    </script>
+</body>
+</html>
